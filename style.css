@@ -7,7 +7,6 @@ body {
     color: #333;
 }
 
-/* Header Styles */
 .header {
     background-color: #0056b3;
     color: #fff;
@@ -29,38 +28,32 @@ body {
     margin-bottom: 10px;
 }
 
-/* Menu Navigation Styles */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #003d80;
+    padding: 10px 0;
+}
+
 .menu li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 1.1em;
     position: relative;
-    padding: 5px 10px;
-    transition: color 0.3s ease-in-out;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Add hover effect */
 .menu li a:hover {
-    color: #ffcc00; /* Warna teks berubah */
+    background-color: #ffcc00;
+    color: #0056b3;
+    border-radius: 5px;
 }
-
-/* Add underline animation */
-.menu li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* Jarak garis dari teks */
-    width: 0;
-    height: 2px;
-    background-color: #ffcc00; /* Warna garis hover */
-    transition: width 0.3s ease-in-out;
-}
-
-.menu li a:hover::after {
-    width: 100%; /* Garis muncul sepanjang teks */
-}
-
 
 .container {
     width: 80%;
@@ -70,55 +63,48 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section {
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-section h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    color: #0056b3;
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-}
-
-.skills-list li {
-    width: 30%;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #e7f3ff;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.skills-list li i {
-    margin-right: 8px;
-    color: #007bff;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: skyblue;
 }
 
 .footer {
     background-color: #0056b3;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: 20px;
 }
-/* Profile Photo */
+
+.footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffcc00;
+}
 .profile-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Membuat foto berbentuk lingkaran */
-    object-fit: cover; /* Memastikan foto pas di dalam lingkaran */
-    margin-bottom: 10px; /* Spasi di bawah foto */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    width: 150px; /* Lebar foto */
+    height: 150px; /* Tinggi foto */
+    border-radius: 50%; /* Membuat foto menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    margin: 0 auto 10px; /* Menambahkan margin di bawah foto */
+    display: block; /* Menjadikan elemen block agar terpusat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
 }
 
